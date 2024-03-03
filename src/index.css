@@ -1,0 +1,207 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+ 
+
+}
+
+.headingText {
+  font-family: "Quintessential", serif;
+  font-weight: 800;
+}
+
+.bk {
+  background-image: url("./assets/Images/surfing3.png");
+  
+}
+
+.shadow{
+  text-shadow: rgb(7, 51, 51) 1px 0 10px;
+}
+
+.shadow2{
+  text-shadow: rgb(1, 14, 14) 2px 0 10px;
+}
+
+.hanger{
+  
+  background-image: linear-gradient(to bottom, rgba(161, 220, 243, 0.52), rgba(150, 211, 235, 0.73)), url("./assets/Images/tshirtsHanger.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  
+}
+
+.wid{
+  width: 50rem;
+}
+
+
+.hangerheight{
+  height: 35rem;
+}
+
+.login-background{
+  background-image: linear-gradient( to bottom , rgba(3, 17, 17, 0.53) ,  rgba(3, 17, 17, 0.72)) , url("./assets/Images/loginbackground.jpg");
+}
+
+#mySelect option:hover {
+  color : white;
+  background-color: rgb(22 78 99 )
+}
+
+.tshirt-image {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+.imageHeight{
+  height : 30rem;
+}
+
+.signInHeight{
+  height: 90%;
+}
+
+.formHeight{
+  height: 90%;
+}
+
+.footerHeight{
+  height: 16rem;
+}
+
+
+  .mobileDesignHeight{
+    height: 55rem;
+  }
+
+
+  * default styling *
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  
+  /* navbar */
+  .navbar {
+    background-color: aliceblue;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: 70px;
+  }
+  
+  
+  /* logo  */
+  .logo {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  /* ul  */
+  .navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  /* media queries */
+  
+  @media screen and (max-width: 780px){
+    
+    /* hamburger */
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .bar {
+          background-color: #120f0b;
+          width: 20px;
+          height: 3px;
+          display: block;
+          margin: 5px;
+          -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+      }
+  
+    /* adding active class to the bars  */
+    .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+  
+    /* navMenu */
+  
+    .navMenu{
+      position: absolute;
+      flex-direction: column;
+      gap: 0;
+      top: 70px;
+      left: -100%;
+      text-align: start;
+      width: 100%;
+      transition: 0.7s ease-in-out;
+      background-color: aliceblue;
+      padding: 10px;
+    }
+  
+    .navMenu.active{
+      left: 0;
+    }
+  
+    .navMenu li {
+      margin: 16px 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1400px){
+   .small-screen{
+    padding-left: 0;
+    margin: 0
+    
+    
+   } 
+
+   .small-screen li {
+    background-color: red;
+   }
+  }
+
+
+  
+
+
+
+

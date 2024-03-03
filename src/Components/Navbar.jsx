@@ -18,7 +18,7 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
         />
       </Link>
 
-      <section className="small-screen col-span-8 grid grid-cols-8 pl-[16rem] justify-center md:flex md:items-center relative">
+      <section className="small-screen col-span-8 grid grid-cols-8 pl-[12rem] justify-center md:flex md:items-center relative">
         {/* Mobile view toggle button */}
         <div className="place-items-center  sm:mt-2 md:hidden absolute  z-50  right-0 ">
           <button
@@ -65,22 +65,24 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
           >
             Make your design
           </Link>
-          {/* Sign in/out button */}
+          
+        </div>
+
+        {/* Sign in/out button */}
           {isAuthenticated ? (
             <button
               onClick={onSignOut}
-              className={`md:ml-auto ${navbar ? "flex flex-col" : "hidden"}`}
+              className={`signing md:ml-auto ${navbar ? "flex flex-col" : "hidden"}`}
             >
               Sign Out
             </button>
           ) : (
             <Link to="/login" className={`md:ml-auto ${navbar ? "" : ""}`}>
-              <button className="text-center text-cyan-100 bg-cyan-700  w-25  md:w-30 px-8 py-2 md:py-2 lg:py-2 rounded-full    hover:scale-95">
+              <button className="signing text-center text-cyan-100 bg-cyan-700  w-25  md:w-30 px-8 py-2 md:py-2 lg:py-2 rounded-full    hover:scale-95">
                 Sign In
               </button>
             </Link>
           )}
-        </div>
       </section>
     </div>
   );

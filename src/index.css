@@ -19,7 +19,7 @@
 }
 
 .bk {
-  background-image: url("./assets/Images/surfing3.png");
+  background-image: url("/surfing3.png");
   
 }
 
@@ -190,13 +190,13 @@
    .small-screen{
     padding-left: 0;
     margin: 0
-    
-    
    } 
+  }
 
-   .small-screen li {
-    background-color: red;
-   }
+  @media screen and (max-width: 768px) {
+    .signing {
+      display: none;
+    }
   }
 
 

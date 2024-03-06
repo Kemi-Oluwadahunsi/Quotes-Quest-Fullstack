@@ -35,12 +35,12 @@ const Homepage = () => {
 
         <main className=" px-4 py-16 sm:py-20 md:py-14 xl:p-10">
           <div className="flex flex-col gap-6 text-center sm:mt-10 lg:mt-28">
-            <h1 className="font-extrabold text-4xl md:text-6xl lg:text-[12rem] text-white headingText">
+            <h1 className="font-extrabold text-4xl sm:text-[6rem] lg:text-[12rem] text-white headingText">
               {" "}
               <span className="text-cyan-900">Q</span>uotes{" "}
               <span className="text-cyan-500">Q</span>uest
             </h1>
-            <h3 className="text-md lg:text-3xl text-white font-bold shadow">
+            <h3 className="text-md sm:mt-2 sm:text-lg lg:text-3xl text-white font-bold shadow">
               Create custom designs from motivational quotes that are wearable
               and tappable.
             </h3>

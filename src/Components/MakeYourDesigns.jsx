@@ -112,7 +112,7 @@ const MakeYourDesigns = ({ quote }) => {
         <div className="flex justify-center pt-52 lg:p-0 relative ">
           <button
             onClick={handleDownloadClick}
-            className="bg-cyan-500 hover:bg-cyan-900 text-white lg:font-bold py-2 px-4 rounded"
+            className="bg-cyan-500 hover:bg-cyan-900 text-white mt:0 lg:mt-[4rem] lg:font-bold py-2 px-4 rounded"
           >
             Download
           </button>

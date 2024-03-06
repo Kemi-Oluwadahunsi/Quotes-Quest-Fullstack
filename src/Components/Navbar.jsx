@@ -38,7 +38,7 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
           className={`top-0 md:ml-3 items-center lg:space-x-10 gap-4 md:col-span-6 ${
             navbar
               ? " mt-2 space-y-2 py-14 w-screen absolute top-10 flex flex-col md:flex-row z-50 bg-cyan-600"
-              : "hidden md:flex"
+              : "hidden md:flex "
           }`}
         >
           <Link
@@ -65,24 +65,44 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
           >
             Make your design
           </Link>
-          
-        </div>
-
-        {/* Sign in/out button */}
           {isAuthenticated ? (
             <button
               onClick={onSignOut}
-              className={`signing md:ml-auto ${navbar ? "flex flex-col" : "hidden"}`}
+              className={`signing md:ml-auto ${
+                navbar ? "hidden" : "flex flex-col"
+              }`}
             >
               Sign Out
             </button>
           ) : (
-            <Link to="/login" className={`md:ml-auto ${navbar ? "" : ""}`}>
-              <button className="signing text-center text-cyan-100 bg-cyan-700  w-25  md:w-30 px-8 py-2 md:py-2 lg:py-2 rounded-full    hover:scale-95">
+            <Link
+              to="/login"
+              className={`md:ml-auto ${navbar ? "" : "hidden"}`}
+            >
+              <button className="text-center text-cyan-100 bg-cyan-700  w-25  md:w-30 px-8 py-2 md:py-2 lg:py-2 rounded-full    hover:scale-95">
                 Sign In
               </button>
             </Link>
           )}
+        </div>
+
+        {/* Sign in/out button */}
+        {isAuthenticated ? (
+          <button
+            onClick={onSignOut}
+            className={`signing md:ml-auto ${
+              navbar ? "flex flex-col" : "hidden"
+            }`}
+          >
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/login" className={`md:ml-auto ${navbar ? "" : ""}`}>
+            <button className="signing text-center text-cyan-100 bg-cyan-700  w-25  md:w-30 px-8 py-2 md:py-2 lg:py-2 rounded-full    hover:scale-95">
+              Sign In
+            </button>
+          </Link>
+        )}
       </section>
     </div>
   );

@@ -13,7 +13,7 @@ function App() {
   const [quote, setQuote] = useState(null);
 
   return (
-    <>
+    <div classname="max-w-[1600px] mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/makedesigns" element={<MakeYourDesigns quote={quote} />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
